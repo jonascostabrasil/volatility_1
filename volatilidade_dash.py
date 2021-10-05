@@ -72,6 +72,6 @@ currency['Volatilidade_Acumulada'] = currency['Volatilidade Modificada'].rolling
 st.write(currency.tail(10))
 
 #Grafico
-
-fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
+st.title('Distribuição')
+fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10,discrete=True)
 st.pyplot(fig)
