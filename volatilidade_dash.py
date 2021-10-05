@@ -73,5 +73,5 @@ st.write(currency.tail(10))
 
 #Grafico
 st.title('Distribuição')
-fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10,discrete=True)
+fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
 st.pyplot(fig)
