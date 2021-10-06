@@ -73,6 +73,9 @@ st.title('Table')
 st.write(currency.tail(5))
 st.write(currency['Volatilidade_Acumulada'].tail(2))
 
+col1, col2 = st.columns(2)
+col1.st.write(currency['Volatilidade_Acumulada'].tail(2))
+col2.st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
 
 #Grafico
 st.title('Volatility')
