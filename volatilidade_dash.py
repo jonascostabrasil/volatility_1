@@ -73,10 +73,9 @@ st.write(currency.tail(10))
 
 #Grafico
 st.title('Volatility')
-fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
-fig.update_layout(
-    yaxis_title='Taxa'
-)
+fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10), plt.axvline(currency['Volatilidade_Acumulada'].quantile(.95),color='r',linewidth=4,ls='--')
+
+
 st.pyplot(fig)
 
 st.markdown('97%')
