@@ -73,16 +73,12 @@ st.title('Table')
 st.write(currency.tail(5))
 st.write(currency['Volatilidade_Acumulada'].tail(2))
 
-col1, col2 = st.columns(2)
-col1.write(currency['Volatilidade_Acumulada'].tail(2))
-col2.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
+st.markdown('97%')
+st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
+st.markdown('2%')
+st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
 
 #Grafico
 st.title('Volatility')
 fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
 st.pyplot(fig)
-
-st.markdown('97%')
-st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
-st.markdown('2%')
-st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
