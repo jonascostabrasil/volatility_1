@@ -75,3 +75,8 @@ st.write(currency.tail(10))
 st.title('Volatility')
 fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
 st.pyplot(fig)
+
+st.write(97%)
+st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
+st.write(2%)
+st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean()*-1)
