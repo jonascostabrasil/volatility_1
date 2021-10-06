@@ -77,6 +77,10 @@ st.markdown('+')
 st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
 st.markdown('-')
 st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
+st.markdown('Q05')
+st.write(currency['Volatilidade_Acumulada'].quantile(.05))
+st.markdown('Q95')
+st.write(currency['Volatilidade_Acumulada'].quantile(.95))
 
 #Grafico
 st.title('Volatility')
