@@ -69,13 +69,15 @@ currency['Volatilidade_Acumulada'] = currency['Volatilidade Modificada'].rolling
 #Adicionando Total Pips
 #currency['Total_Pips'] = (currency['Close'] - currency['Open']) * 10000
 
-st.write(currency.tail(10))
+st.title('Table')
+st.write(currency.tail(5))
+st.title('Volatility')
+st.write(currency['Volatilidade_Acumulada'].tail(2))
+
 
 #Grafico
 st.title('Volatility')
 fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
-
-
 st.pyplot(fig)
 
 st.markdown('97%')
