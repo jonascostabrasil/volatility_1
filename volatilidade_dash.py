@@ -76,7 +76,7 @@ st.write(currency['Volatilidade_Acumulada'].tail(2))
 st.markdown('+')
 st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
 st.markdown('-')
-st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean(),color='r')
+st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean()),color='r')
 
 #Grafico
 st.title('Volatility')
