@@ -71,7 +71,6 @@ currency['Volatilidade_Acumulada'] = currency['Volatilidade Modificada'].rolling
 
 st.title('Table')
 st.write(currency.tail(5))
-st.title('Volatility')
 st.write(currency['Volatilidade_Acumulada'].tail(2))
 
 
