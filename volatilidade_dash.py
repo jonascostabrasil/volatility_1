@@ -73,8 +73,5 @@ st.write(currency.tail(10))
 
 #Grafico
 st.title('Volatility')
-fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10),
-plt.axvline(currency['Volatilidade_Acumulada'].quantile(.95),color='r',linewidth=4,ls='--'),
-plt.axvline(currency['Volatilidade_Acumulada'].quantile(.05),color='g',linewidth=4,ls='--')
-    
+fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
 st.pyplot(fig)
