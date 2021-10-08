@@ -29,7 +29,10 @@ currency_data = np.array(inv.get_currency_crosses_list())
 list1 = ['Majors','ALL']
 major = st.sidebar.selectbox('GROUP', list1)
 
-currency_choice = st.sidebar.selectbox('Select the pair', currency_data)
+if major == 'Majors':
+    currency_choice = st.sidebar.selectbox('Select the pair', currency_data)
+elif major == 'ALL':
+    currency_choice = st.sidebar.selectbox('Select the pair', currency_data)
 
 #Data Inicio
 start_date = st.sidebar.text_input('Start Date', data_inicio)
