@@ -26,11 +26,14 @@ st.sidebar.header('Pairs')
 
 #Carregando as moedas
 currency_data = np.array(inv.get_currency_crosses_list())
+list1 = ['Majors','ALL']
+major = st.sidebar.selectbox('GROUP', list1)
+
 currency_choice = st.sidebar.selectbox('Select the pair', currency_data)
 
 #Data Inicio
-start_date = st.sidebar.text_input('Data início', data_inicio)
-end_date = st.sidebar.text_input('Data final', data_fim)
+start_date = st.sidebar.text_input('Start Date', data_inicio)
+end_date = st.sidebar.text_input('End Date', data_fim)
 
 if start_date > end_date:
     st.write('Data de início não pode ser menor que a data final')
