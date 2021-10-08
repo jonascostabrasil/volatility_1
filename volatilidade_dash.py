@@ -84,13 +84,13 @@ col1, col2, col3, col4 = st.columns(4)
 col1.write('Two standard deviations +')
 col1.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
 
-col2.header('Two standard deviations -')
+col2.write('Two standard deviations -')
 col2.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
 
-col3.header('Q15')
+col3.markdown('Q15')
 col3.write(currency['Volatilidade_Acumulada'].quantile(.15))
 
-col4.header('Q85')
+col4.markdown('Q85')
 col4.write(currency['Volatilidade_Acumulada'].quantile(.85))
 
 #Grafico
