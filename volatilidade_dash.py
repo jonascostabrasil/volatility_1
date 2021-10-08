@@ -73,13 +73,13 @@ st.title('Table')
 st.write(currency.tail(5))
 st.write(currency['Volatilidade_Acumulada'].tail(2))
 
-st.markdown('+')
+st.markdown('Two standard deviations +')
 st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
-st.markdown('-')
+st.markdown('Two standard deviations -')
 st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
-st.markdown('Q05')
+st.markdown('Q15')
 st.write(currency['Volatilidade_Acumulada'].quantile(.15))
-st.markdown('Q95')
+st.markdown('Q85')
 st.write(currency['Volatilidade_Acumulada'].quantile(.85))
 
 #Grafico
