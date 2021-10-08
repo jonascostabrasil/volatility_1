@@ -81,7 +81,7 @@ st.write(currency.tail(5))
 st.write(currency['Volatilidade_Acumulada'].tail(2))
 
 col1, col2, col3, col4 = st.columns(4)
-col1.header('Two standard deviations +')
+col1.write('Two standard deviations +')
 col1.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
 
 col2.header('Two standard deviations -')
