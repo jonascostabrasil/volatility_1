@@ -28,9 +28,10 @@ st.sidebar.header('Pairs')
 currency_data = np.array(inv.get_currency_crosses_list())
 list1 = ['Majors','ALL']
 major = st.sidebar.selectbox('GROUP', list1)
+list2 = ['EUR/USD','USD/JPY','GBP/USD','USD/CHF','USD/CAD','NZD/USD','AUD/USD']
 
 if major == 'Majors':
-    currency_choice = st.sidebar.selectbox('Select the pair', currency_data)
+    currency_choice = st.sidebar.selectbox('Select the pair', list2)
 elif major == 'ALL':
     currency_choice = st.sidebar.selectbox('Select the pair', currency_data)
 
