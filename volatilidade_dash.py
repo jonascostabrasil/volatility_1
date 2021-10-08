@@ -93,16 +93,6 @@ col3.write(currency['Volatilidade_Acumulada'].quantile(.15))
 col4.header('Q85')
 col4.write(currency['Volatilidade_Acumulada'].quantile(.85))
 
-#col2.metric = st.markdown('Two standard deviations +'), 
-#col3.metric = st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
-#col4.metric = st.markdown('Two standard deviations -') 
-#col5.metric = st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
-
-#st.markdown('Q15')
-#st.write(currency['Volatilidade_Acumulada'].quantile(.15))
-#st.markdown('Q85')
-#st.write(currency['Volatilidade_Acumulada'].quantile(.85))
-
 #Grafico
 st.title('Volatility')
 fig = sns.displot(currency, x='Volatilidade_Acumulada',bins=10)
