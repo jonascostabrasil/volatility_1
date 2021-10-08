@@ -80,11 +80,17 @@ st.title('Table')
 st.write(currency.tail(5))
 st.write(currency['Volatilidade_Acumulada'].tail(2))
 
-col1, col2,col3,col4,col5,col6 = st.columns(6)
-col2.metric = st.markdown('Two standard deviations +'), 
-col3.metric = st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
-col4.metric = st.markdown('Two standard deviations -') 
-col5.metric = st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
+col1, col2 = st.columns(2)
+col1.header('Two standard deviations +')
+col1.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
+
+col2.header('Two standard deviations -')
+col2.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
+
+#col2.metric = st.markdown('Two standard deviations +'), 
+#col3.metric = st.write(currency['Volatilidade_Acumulada'].std()*2+currency['Volatilidade_Acumulada'].mean())
+#col4.metric = st.markdown('Two standard deviations -') 
+#col5.metric = st.write((currency['Volatilidade_Acumulada'].std()*2)*-1+currency['Volatilidade_Acumulada'].mean())
 
 st.markdown('Q15')
 st.write(currency['Volatilidade_Acumulada'].quantile(.15))
